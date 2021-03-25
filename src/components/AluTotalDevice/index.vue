@@ -53,9 +53,9 @@ export default {
   },
   setup(ctx) {
     const refData = ref([]);
-    const num = ref(0);
-    const startNum = ref(0);
-
+    // const refData = ref([{startValue: '20', value: '100',name: 'name1', color: 'red'}]);
+    const num = ref(100000);
+    const startNum = ref(100);
     const options = ref({
       series: [
         {

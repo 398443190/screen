@@ -10,6 +10,7 @@
       <div class="center">
         <div class="left">
           <div class="left1">
+            left1
           </div>
           <div class="left2">
             <AluAverageAge
@@ -32,26 +33,35 @@
             ]" />
           </div>
           <div class="left4">
+            <AluTotalGender />
           </div>
           <div class="left5">
+            left5
           </div>
           <div class="left6">
+            left6
           </div>
         </div>
         <div class="right">
           <div class="right-top1">
+            right-top1
           </div>
           <div class="right-top2">
+            right-top2
           </div>
           <div class="right-bottom">
             <div class="right-left">
               <div class="right-left1">
+                right-left1
               </div>
               <div class="right-left2">
+                right-left2
               </div>
               <div class="right-left3">
+                right-left3
               </div>
               <div class="right-left4">
+                right-left4
               </div>
             </div>
             <div class="right-right">
@@ -72,10 +82,11 @@
   import { getCurrentInstance, onMounted } from 'vue'
   import Container from '../components/AluContainer/AluContainer.vue'
   import AluEcharts from '../components/AluEcharts'
-  import AluSeparator from '../components/AluSeparator'
-  import Header from '../components/TopHeader2'
-  import AluAverageAge from '../components/AluAverageAge'
-  import AluTotalDevice from '../components/AluTotalDevice'
+  import AluSeparator from '../components/AluSeparator' // 头部下面的线段
+  import Header from '../components/TopHeader2' // 头部组件 
+  import AluAverageAge from '../components/AluAverageAge' // 左边第二个组件
+  import AluTotalGender from '../components/AluTotalGender' // 左边第二个组件
+  import AluTotalDevice from '../components/AluTotalDevice'// 组件第三个组件
 
   export default {
     components: {
@@ -84,7 +95,8 @@
       AluEcharts,
       AluSeparator,
       AluAverageAge,
-      AluTotalDevice
+      AluTotalDevice,
+      AluTotalGender
     },
     setup () {
       const context = getCurrentInstance().ctx
