@@ -36,7 +36,7 @@
             <AluTotalGender />
           </div>
           <div class="left5">
-            left5
+            <AluLineChart />
           </div>
           <div class="left6">
             left6
@@ -87,6 +87,7 @@
   import AluAverageAge from '../components/AluAverageAge' // 左边第二个组件
   import AluTotalGender from '../components/AluTotalGender' // 左边第二个组件
   import AluTotalDevice from '../components/AluTotalDevice'// 组件第三个组件
+  import AluLineChart from '../components/AluLineChart'// 组件第三个组件
 
   export default {
     components: {
@@ -96,7 +97,8 @@
       AluSeparator,
       AluAverageAge,
       AluTotalDevice,
-      AluTotalGender
+      AluTotalGender,
+      AluLineChart
     },
     setup () {
       const context = getCurrentInstance().ctx

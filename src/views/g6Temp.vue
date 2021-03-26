@@ -12,12 +12,11 @@ export default {
   },
   data() {
     return {
-      a: "",
     };
   },
   methods: {
     handleClick(item) {
-      console.log(item, 'item')
+      console.log(item, "item");
     },
     initG6() {
       const that = this;
@@ -51,18 +50,6 @@ export default {
             id: "7",
             label: "Company7",
           },
-          {
-            id: "8",
-            label: "Company8",
-          },
-          {
-            id: "9",
-            label: "Company9",
-          },
-          {
-            id: "10",
-            label: "Company10",
-          },
         ],
         edges: [
           {
@@ -94,47 +81,52 @@ export default {
             target: "7",
           },
           {
-            source: "1",
-            target: "8",
-          },
-          {
-            source: "8",
-            target: "4",
-          },
-          {
-            source: "1",
-            target: "9",
-          },
-          {
-            source: "9",
-            target: "4",
+            source: "7",
+            target: "6",
           },
         ],
       };
       G6.registerNode(
-        "dom-node",
+        "round-rect",
         {
-          draw: (cfg, group) => {
-            return group.addShape("dom", {
+          drawShape: function drawShape(cfg, group) {
+            const width = cfg.style.width;
+            const stroke = cfg.style.stroke;
+            const rect = group.addShape("rect", {
               attrs: {
                 x: -width / 2,
                 y: -15,
-                width: 120,
-                height: 40,
-                // 传入 DOM 的 html
-                html: `
-        <div id=${cfg.id}  style="background-color: #fff; border: 2px solid #5B8FF9;padding:5px 10px; border-radius: 5px; display: flex; justify-content: center;align-items: center;">
-          ${cfg.label}
-        </div>
-          `,
+                width,
+                height: 30,
+                radius: 15,
+                stroke,
+                lineWidth: 1.2,
+                fillOpacity: 1,
               },
+              name: "rect-shape",
             });
+            return rect;
           },
           getAnchorPoints: function getAnchorPoints() {
             return [
               [0, 0.5],
               [1, 0.5],
             ];
+          },
+          update: function update(cfg, item) {
+            const group = item.getContainer();
+            const children = group.get("children");
+            const node = children[0];
+            const circleLeft = children[1];
+            const circleRight = children[2];
+
+            const stroke = cfg.style.stroke;
+
+            // if (stroke) {
+            //   node.attr("stroke", stroke);
+            //   circleLeft.attr("fill", stroke);
+            //   circleRight.attr("fill", stroke);
+            // }
           },
         },
         "single-node"
@@ -207,7 +199,6 @@ export default {
       const height = document.getElementById("container").scrollHeight || 400;
       const graph = new G6.Graph({
         container: "container",
-        renderer: "svg",
         width,
         height,
         layout: {
@@ -220,7 +211,17 @@ export default {
           default: ["drag-canvas"],
         },
         defaultNode: {
-          type: "dom-node",
+          type: "round-rect",
+          labelCfg: {
+            style: {
+              fill: "#000000A6",
+              fontSize: 10,
+            },
+          },
+          style: {
+            stroke: "#72CC4A",
+            width: 150,
+          },
         },
         defaultEdge: {
           type: "polyline",
@@ -243,14 +244,6 @@ export default {
       //   })
       // })
       const nodes = graph.getNodes();
-      that.$nextTick(() => {
-        nodes.forEach((item) => {
-          console.log(item._cfg.model, "item");
-          document.getElementById(item._cfg.id).onclick = function () {
-            that.handleClick(item._cfg.model);
-          };
-        });
-      });
       graph.paint();
     },
   },

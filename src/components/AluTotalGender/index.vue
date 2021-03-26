@@ -46,10 +46,10 @@
       data: Array
     },
     setup(props) {
-      const startMale = ref(0)
-      const endMale = ref(0)
-      const startFemale = ref(0)
-      const endFemale = ref(0)
+      const startMale = ref(10)
+      const endMale = ref(2000)
+      const startFemale = ref(10)
+      const endFemale = ref(20)
       watch(() => props.data, (newData) => {
         startMale.value = endMale.value
         endMale.value = newData[0].value
