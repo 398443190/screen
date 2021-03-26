@@ -39,7 +39,7 @@
             <AluLineChart />
           </div>
           <div class="left6">
-            left6
+            <AluBarChart />
           </div>
         </div>
         <div class="right">
@@ -86,8 +86,9 @@
   import Header from '../components/TopHeader2' // 头部组件 
   import AluAverageAge from '../components/AluAverageAge' // 左边第二个组件
   import AluTotalGender from '../components/AluTotalGender' // 左边第二个组件
-  import AluTotalDevice from '../components/AluTotalDevice'// 组件第三个组件
-  import AluLineChart from '../components/AluLineChart'// 组件第三个组件
+  import AluTotalDevice from '../components/AluTotalDevice'//  左边第三个组件
+  import AluLineChart from '../components/AluLineChart'//  左边第三个组件
+  import AluBarChart from '../components/AluBarChart'//  左边第四个组件
 
   export default {
     components: {
@@ -98,7 +99,8 @@
       AluAverageAge,
       AluTotalDevice,
       AluTotalGender,
-      AluLineChart
+      AluLineChart,
+      AluBarChart
     },
     setup () {
       const context = getCurrentInstance().ctx
