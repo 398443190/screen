@@ -89,11 +89,13 @@
                 />
               </div>
               <div class="right-left3">right-left3</div>
-              <div class="right-left4">right-left4</div>
+              <div class="right-left4">
+                <AluScheduleView />
+              </div>
             </div>
             <div class="right-right">
-              <div class="right-right1"></div>
-              <div class="right-right2"></div>
+              <div class="right-right1">right-right1</div>
+              <div class="right-right2">right-right1</div>
             </div>
           </div>
         </div>
@@ -117,6 +119,7 @@ import AluLineChart from "../components/AluLineChart"; //  左边第三个组件
 import AluBarChart from "../components/AluBarChart"; //  左边第四个组件
 import AluCenterHeader from "../components/AluCenterHeader"; //  左边第四个组件
 import AluCountryCategory from "../components/AluCountryCategory"; //  左边第四个组件
+import AluScheduleView from "../components/AluScheduleView"; //  左边第四个组件
 
 export default {
   components: {
@@ -132,6 +135,7 @@ export default {
     AluBarChart,
     AluCenterHeader,
     AluCountryCategory,
+    AluScheduleView
   },
   setup() {
     const context = getCurrentInstance().ctx;
