@@ -88,7 +88,12 @@
                   :color="['rgb(178, 209, 126)', 'rgb(116, 166, 49)']"
                 />
               </div>
-              <div class="right-left3">right-left3</div>
+              <div class="right-left3">
+
+                <dv-border-box-8 :color="['rgb(66, 68, 70)', 'rgb(251,253,142)']">
+                  <AluAverageView />
+                </dv-border-box-8>
+              </div>
               <div class="right-left4">
                 <AluScheduleView />
               </div>
@@ -120,6 +125,7 @@ import AluBarChart from "../components/AluBarChart"; //  左边第四个组件
 import AluCenterHeader from "../components/AluCenterHeader"; //  左边第四个组件
 import AluCountryCategory from "../components/AluCountryCategory"; //  左边第四个组件
 import AluScheduleView from "../components/AluScheduleView"; //  左边第四个组件
+import AluAverageView from "../components/AluAverageView";
 
 export default {
   components: {
@@ -135,7 +141,8 @@ export default {
     AluBarChart,
     AluCenterHeader,
     AluCountryCategory,
-    AluScheduleView
+    AluScheduleView,
+    AluAverageView
   },
   setup() {
     const context = getCurrentInstance().ctx;
