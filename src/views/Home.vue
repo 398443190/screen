@@ -101,7 +101,9 @@
               <div class="right-right1">
                 <AluPlanList />
               </div>
-              <div class="right-right2">right-right1</div>
+              <div class="right-right2">
+                <AluActivateUser />
+              </div>
             </div>
           </div>
         </div>
@@ -128,6 +130,7 @@ import AluCountryCategory from "../components/AluCountryCategory"; //  左边第
 import AluScheduleView from "../components/AluScheduleView"; //  左边第四个组件
 import AluAverageView from "../components/AluAverageView";
 import AluPlanList from "../components/AluPlanList";
+import AluActivateUser from "../components/AluActivateUser";
 
 export default {
   components: {
@@ -145,7 +148,8 @@ export default {
     AluCountryCategory,
     AluScheduleView,
     AluAverageView,
-    AluPlanList
+    AluPlanList,
+    AluActivateUser
   },
   setup() {
     const context = getCurrentInstance().ctx;
