@@ -6,14 +6,14 @@ import store from './store'
 import Echarts from 'vue-echarts'
 import AluEcharts from './components/AluEcharts'
 import VueCountTo from './components/VueCountTo/vue-countTo'
-import dataV from '@jiaminghi/data-view'
+// import dataV from '@jiaminghi/data-view'
 // console.log(Echarts, 'echarts')
 
 createApp(App)
     .use(store)
     .use(router)
     // .use(compon)
-    .use(dataV)
+    // .use(dataV)
     .component('vue-echarts', Echarts)
     .component('alu-echarts', AluEcharts)
     .component('CountTo', VueCountTo)

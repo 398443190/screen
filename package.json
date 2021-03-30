@@ -9,6 +9,8 @@
     },
     "dependencies": {
         "@antv/g6": "^4.1.16",
+        "@jiaminghi/c-render": "^0.4.3",
+        "@jiaminghi/charts": "^0.2.18",
         "@jiaminghi/data-view": "^2.10.0",
         "core-js": "^3.6.5",
         "echarts": "^5.0.0",
@@ -33,6 +35,8 @@
         "eslint-plugin-promise": "^4.2.1",
         "eslint-plugin-standard": "^4.0.0",
         "eslint-plugin-vue": "^7.0.0-0",
+        "less": "^3.0.4",
+        "less-loader": "^5.0.0",
         "sass": "^1.26.5",
         "sass-loader": "^8.0.2",
         "uuid": "^3.4.0"

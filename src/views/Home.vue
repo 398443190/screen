@@ -89,17 +89,18 @@
                 />
               </div>
               <div class="right-left3">
-
-                <dv-border-box-8 :color="['rgb(66, 68, 70)', 'rgb(251,253,142)']">
+                <!-- <dv-border-box-8 :color="['rgb(66, 68, 70)', 'rgb(251,253,142)']"> -->
                   <AluAverageView />
-                </dv-border-box-8>
+                  <!-- </dv-border-box-8> -->
               </div>
               <div class="right-left4">
                 <AluScheduleView />
               </div>
             </div>
             <div class="right-right">
-              <div class="right-right1">right-right1</div>
+              <div class="right-right1">
+                <AluPlanList />
+              </div>
               <div class="right-right2">right-right1</div>
             </div>
           </div>
@@ -110,7 +111,7 @@
 </template>
 
 <script>
-/* eslint-disable */
+  /* eslint-disable */
 import { getCurrentInstance, onMounted } from "vue";
 import Container from "../components/AluContainer/AluContainer.vue";
 import AluEcharts from "../components/AluEcharts";
@@ -126,6 +127,7 @@ import AluCenterHeader from "../components/AluCenterHeader"; //  左边第四个
 import AluCountryCategory from "../components/AluCountryCategory"; //  左边第四个组件
 import AluScheduleView from "../components/AluScheduleView"; //  左边第四个组件
 import AluAverageView from "../components/AluAverageView";
+import AluPlanList from "../components/AluPlanList";
 
 export default {
   components: {
@@ -142,7 +144,8 @@ export default {
     AluCenterHeader,
     AluCountryCategory,
     AluScheduleView,
-    AluAverageView
+    AluAverageView,
+    AluPlanList
   },
   setup() {
     const context = getCurrentInstance().ctx;
