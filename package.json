@@ -14,8 +14,8 @@
         "@jiaminghi/data-view": "^2.10.0",
         "core-js": "^3.6.5",
         "echarts": "^5.0.0",
-        "libs-component": "file:../Desktop/libs-component",
         "vue": "^3.0.0",
+        "libs-component": "file:../Desktop/libs-component",
         "vue-echarts": "^5.0.0-beta.0",
         "vue-router": "^4.0.0-0",
         "vuex": "^4.0.0-0"

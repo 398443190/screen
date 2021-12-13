@@ -22,3 +22,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+<!-- "libs-component": "file:../Desktop/libs-component", -->
+<!-- "libs-component": "Users/alu/Libs-component", -->
